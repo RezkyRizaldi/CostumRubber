@@ -1,0 +1,91 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.my-header {
+  text-align: center;
+  padding: 18px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.my-header a {
+  display: block;
+  text-decoration: none;
+}
+
+.my-logo {
+  position: relative;
+  left: 70px;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  width: 150px;
+}
+
+.image {
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+.my-input-search {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.my-button-search {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.my-bg {
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 120px;
+  border: 1.5px solid #000;
+}
+
+.my-bg ul {
+  position: absolute; margin: 0; padding: 0; display: flex;
+}
+
+.my-bg ul li {
+  list-style: none;
+}
+
+.my-bg ul li a {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 6.5px 4px;
+  padding: 5px;
+  box-sizing:border-box;
+  text-decoration: none;
+  box-shadow: -6px -6px 15px rgba(255, 255, 255, 0),
+               6px 6px 15px rgba(0, 0, 0, .5);
+  transition: .5s;
+  background-color: #eaeaea;
+  font-size: 10px;
+}
+
+.my-bg ul li .fa {
+  font-size: 22px;
+  color: #555;
+}
+
+.my-bg ul li a:hover {
+   box-shadow: inset 6px 6px 10px rgba(0, 0, 0, .5),
+               inset -6px -6px 10px rgba(255, 255, 255, 0);
+}
