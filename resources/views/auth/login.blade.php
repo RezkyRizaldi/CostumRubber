@@ -120,7 +120,7 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Rull Rubber</h1>
                     {{-- <p>Masuk disini</p> --}}
-                    <button class="ghost mt-3" id="signUp">Masuk</button>
+                    <button class="ghost mt-3" id="signUp">Mulai</button>
                 </div>
             </div>
         </div>
