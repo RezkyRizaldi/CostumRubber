@@ -28,3 +28,38 @@
 <!-- BEGIN: Page JS-->
 <script src="/admin/app-assets/js/scripts/pages/dashboard-analytics.js"></script>
 <!-- END: Page JS-->
+
+<!-- JS code -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+</script>
+<script src="/admin/assets/bootstrap-4.5.0-dist/js/bootstap.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var table = $('#dataTable').DataTable();
+
+        // Start Edit Record
+        table.on('click','.edit',function(){
+
+            $tr = $(this).closest('tr');
+            if ($($tr).hasClass('child')){
+                $tr = $tr.prev('.parent');
+            }
+            var data = table.row($tr).data();
+            console.log(data);
+            $('#product').val(data[1]);
+            // $('#image').val(data[2]);
+            $('#description').val(data[3]);
+            $('#type').find(':selected');
+            $('#price').val(data[5]);
+            $('#formEdit').attr('action','/admin/product/edit_product/'+data[0]);
+            $('#edit').modal('show');
+        });
+    });
+</script>
+<!--JS below-->

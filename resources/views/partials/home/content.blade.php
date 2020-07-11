@@ -181,7 +181,7 @@
                     <img src="/assets/img/produk.jpg" alt="">
                     <h5>{{ $p->product_name }}</h5>
                     <p>{!! str_limit($p->description, $limit = 50, $end = '') !!}</p>
-                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                    <a href="product/details-product/{{ $p->id }}"><i class="fa fa-long-arrow-right"></i></a>
                 </div>
             </div>
             @endforeach

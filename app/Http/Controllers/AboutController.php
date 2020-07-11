@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\About;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AboutController extends Controller
 {
@@ -35,12 +36,14 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|unique',
-            'username' => 'required',
-            'subject' => 'required',
-            'message' => 'required'
-        ],
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'email' => 'required|unique',
+                'username' => 'required',
+                'subject' => 'required',
+                'message' => 'required'
+            ],
             [
                 'email.required' => 'Harap Masukkan E-mail !',
                 'username.required' => 'Harap Masukkan Nama !',
@@ -49,7 +52,7 @@ class AboutController extends Controller
             ]
         );
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return redirect('/contact')->with('success', 'Silakan isi bidang yang kosong!');
         } else {
             $posts = Post::create([
@@ -58,11 +61,10 @@ class AboutController extends Controller
                 'subject' => $request->input('subject'),
                 'message' => $request->input('message'),
             ]);
- 
+
             if ($posts) {
                 return redirect('/contact')->with('success', 'Pesan berhasil terkirim!');
-               
-            } else{
+            } else {
                 return redirect('/contact')->with('success', 'Pesan gagal terkirim!');
             }
         }
@@ -108,8 +110,9 @@ class AboutController extends Controller
      * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy($id)
     {
-        //
+        DB::table('chat')->where('id', $id)->delete();
+        return redirect('/admin/chat');
     }
 }

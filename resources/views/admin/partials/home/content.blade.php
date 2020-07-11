@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="mr-5">{{ $products }} Produk</div>
                             </div>
-                            <a class="card-footer text-white clearfix small z-1" href="/makanan">
+                            <a class="card-footer text-white clearfix small z-1" href="/admin/product">
                                 <span class="float-left">Selengkapnya</span>
                                 <span class="float-right">
                                     <i class="fad fa-angle-right"></i>

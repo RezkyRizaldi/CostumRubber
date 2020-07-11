@@ -56,6 +56,8 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="/admin/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/admin/assets/bootstrap-4.5.0-dist/css/bootstrap.css">
+
     <!-- END: Custom CSS-->
 
 </head>

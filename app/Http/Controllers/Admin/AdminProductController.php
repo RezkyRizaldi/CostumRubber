@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Admin\AdminProduct;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class AdminProductController extends Controller
 {
@@ -16,7 +18,7 @@ class AdminProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        
+
         return view('admin.product.product', compact('products'));
     }
 
@@ -38,7 +40,14 @@ class AdminProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('products')->insert([
+            'product_name' => $request->product,
+            'description' => $request->description,
+            'image' => $request->file('image')->store('public'),
+            'type' => $request->type,
+            'price' => $request->price
+        ]);
+        return redirect('admin/product');
     }
 
     /**
@@ -72,7 +81,14 @@ class AdminProductController extends Controller
      */
     public function update(Request $request, AdminProduct $adminProduct)
     {
-        //
+        DB::table('products')->update([
+            'product_name' => $request->product,
+            'description' => $request->description,
+            'image' => $request->gambar,
+            'type' => $request->type,
+            'price' => $request->price
+        ]);
+        return redirect('admin/product');
     }
 
     /**
@@ -81,8 +97,9 @@ class AdminProductController extends Controller
      * @param  \App\admin\AdminProduct  $adminProduct
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AdminProduct $adminProduct)
+    public function destroy($id)
     {
-        //
+        DB::table('products')->where('id', $id)->delete();
+        return redirect('/admin/product');
     }
 }
