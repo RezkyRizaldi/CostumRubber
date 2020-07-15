@@ -8,6 +8,6 @@ class AdminProduct extends Model
 {
     protected $table = 'products';
     protected $fillable = [
-        'product_name', 'description', 'image', 'type', 'price'
+        'product_name', 'description', 'image', 'type', 'price', 'stock', 'status'
     ];
 }

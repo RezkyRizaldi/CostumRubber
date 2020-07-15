@@ -98,4 +98,16 @@ class ProductController extends Controller
         return view('product.product', ["products" => $products]);
         // dd($products);
     }
+    public function filter(Request $request)
+    {
+        $filter = $request->get('istilah');
+        $result = Product::where('type', 'LIKE', '%' . $filter . '%')->get();
+        return response()->json($result);
+    }
+    public function filter_product(Request $request)
+    {
+        $filter = $request->filter_product;
+        $products = Product::where('type', 'LIKE', '%' . $filter . '%')->get();
+        return view('product.product', ["products" => $products]);
+    }
 }

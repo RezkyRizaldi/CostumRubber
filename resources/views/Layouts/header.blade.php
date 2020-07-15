@@ -58,8 +58,9 @@
                             <!-- <span style="font-size: 15px; color: #fff; margin-right: 5px;">admin@admin.com</span> -->
                             <div class="header__top__social">
                                 <!-- <a href="#"><i class="fa fa-facebook"></i></a> -->
-                                <a href="http://wa.me/6281312494084" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
-                                <a href="mailto:rullrubber@gmail.com" title="Gmail"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://kontakk.com/wa/287f44" target="_blank" title="WhatsApp"><i
+                                        class="fa fa-whatsapp"></i></a>
+                                <a href="https://shorturl.at/iktT2" title="Gmail"><i class="fa fa-envelope-o"></i></a>
                                 <!-- <a href="#"><i class="fa fa-google"></i></a> -->
                                 <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
                             </div>

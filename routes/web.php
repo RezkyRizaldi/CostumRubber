@@ -24,6 +24,9 @@ Route::get('/product', 'ProductController@index');
 Route::get('/product/details-product/{products}', 'ProductController@show')->name('products');
 Route::get('/search_product', 'ProductController@search')->name('search_product');
 Route::post('/search', 'ProductController@search_product')->name('search');
+Route::post('/filter_product', 'ProductController@filter_product')->name('filter_product');
+Route::post('/filter', 'ProductController@filter')->name('filter');
+
 
 // Details Product Page
 Route::get('/product/details-product', 'ProductDetailsController@index');

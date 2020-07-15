@@ -15,29 +15,72 @@
                     @csrf
                     <div class="form-group">
                         <label for="product_name">Nama Produk</label>
-                        <input type="text" name="product_name" class="form-control" placeholder="Masukkan Nama Produk"
-                            autofocus="" autocomplete="off">
+                        <input type="text" name="product_name"
+                            class="form-control @error('username') is-invalid @enderror"
+                            value="{{ old('product_name') }}" placeholder=" Masukkan Nama Produk" autofocus=""
+                            autocomplete="off">
+                        @error('product_name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <label for="gambar">Gambar</label>
-                        <input type="file" class="form-control-file" name="image">
+                        <label for="image">Gambar</label>
+                        <input type="file" class="form-control-file @error('image') is-invalid @enderror"
+                            value="{{ old('image') }}" name="image">
+                        @error('image')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="description">Deskripsi Produk</label>
-                        <textarea type="text" name="description" class="form-control"
-                            placeholder="Masukkan Deskripsi Produk" autofocus="" autocomplete="off"></textarea>
+                        <textarea type="text" name="description"
+                            class="form-control @error('description') is-invalid @enderror"
+                            value="{{ old('description') }}" placeholder="Masukkan Deskripsi Produk"
+                            autocomplete="off"></textarea>
+                        @error('description')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="type">Tipe</label>
                         <select class="form-control" required="required" name="type">
-                            <option value="Tersedia">Tersedia</option>
-                            <option value="Tidak Tersedia">Tidak Tersedia</option>
+                            <option value="Masker">Masker</option>
+                            <option value="Terjual">Gelang</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="price">Harga Produk</label>
-                        <input type="number" name="price" class="form-control" placeholder="Masukkan Harga Produk"
-                            autofocus="" autocomplete="off">
+                        <input type="number" name="price" class="form-control @error('price') is-invalid @enderror"
+                            value="{{ old('price') }}" placeholder="Masukkan Harga Produk" autocomplete="off">
+                        @error('price')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stok</label>
+                        <input type="number" name="stock" class="form-control @error('stock') is-invalid @enderror"
+                            value="{{ old('stock') }}" placeholder="Masukkan Stok" autocomplete="off">
+                        @error('stock')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" required="required" name="status">
+                            <option value="Tersedia">Tersedia</option>
+                            <option value="Terjual">Terjual</option>
+                            <option value="Akan Datang">Akan Datang</option>
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <input type="submit" name="submit" class="btn btn-success" value="Simpan">

@@ -56,20 +56,35 @@ Edit Produk - Admin | Rull Rubber - Jual Gelang Custom
                                 </div>
                                 <div class="form-group">
                                     <label for="type">Tipe</label>
-                                    <select type="text" class="form-control" id="type" name="type">
-                                        <option value="nahwey">nahwey</option>
-                                        {{-- @foreach ($products as $p)
-                                        <option value="{{ $p->id }}" name="type"
-                                        {{ (isset($p->id) || old('id'))? "selected": "" }}>
-                                        {{ $p->type }}
+                                    <select class="form-control" required="required" id="type" name="type">
+                                        <option disabled selected>- Pilih Tipe -</option>
+                                        @foreach ($products as $p)
+                                        <option value="{{ $p->id }} {{ $p->id ? 'selected' : ''}}">
+                                            {{ $p->type }}
                                         </option>
-                                        @endforeach --}}
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="price">Harga</label>
                                     <input type="number" class="form-control" id="price" name="price"
                                         value="{{ $p->price }}" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="stock">Stok</label>
+                                    <input type="number" class="form-control" id="stock" name="stock"
+                                        value="{{ $p->stock }}" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select class="form-control" required="required" id="status" name="status">
+                                        <option disabled selected>- pilih Status</option>
+                                        @foreach ($products as $p)
+                                        <option value="{{ $p->id }} {{ $p->id ? 'selected' : ''}}">
+                                            {{ $p->status }}
+                                        </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" class="btn btn-success" value="Simpan">

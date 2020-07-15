@@ -49,7 +49,9 @@ class AdminProductController extends Controller
                 'image' => $name,
                 'description' => $request->description,
                 'type' => $request->type,
-                'price' => $request->price
+                'price' => $request->price,
+                'stock' => $request->stock,
+                'status' => $request->status
             ]);
         }
         return redirect()->back()->with('message', 'Successfully Save Your Image file.');
@@ -98,6 +100,8 @@ class AdminProductController extends Controller
             'description' => 'required|min:5',
             'price' => 'required|int',
             'image' => 'required|mimes:jpeg,jpg,png,gif',
+            'stock' => 'required|int',
+            'status' => 'required'
         ));
         function () {
             if (request()->has('image')) {
@@ -115,8 +119,10 @@ class AdminProductController extends Controller
             $description = $request->description;
             $type = $request->type;
             $price = $request->price;
+            $stock = $request->stock;
+            $status = $request->status;
 
-            $data = array('product_name' => $product_name, 'image' => $name, 'description' => $description, 'type' => $type, 'price' => $price);
+            $data = array('product_name' => $product_name, 'image' => $name, 'description' => $description, 'type' => $type, 'price' => $price, 'stock' => $stock, 'status' => $status);
             DB::table('products')->where('id', $id)->update($data);
         }
         return redirect('/admin/product')->with('message', 'Successfull Save Your Image file.');

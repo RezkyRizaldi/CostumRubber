@@ -23,10 +23,16 @@
 
                 <!-- DATA TABLE -->
                 <div class="container">
-                    <div class="row m-t-30">
+                    <div class="row m-t-30 d-flex justify-content-center">
                         <div class="col-md-12">
 
                             <!-- DATA TABLE-->
+                            @if($message=Session::get('success'))
+                            <div class="alert alert-success alert-block">
+                                <button type="button" class="close" data-dismiss="alert">X</button>
+                                <strong>{{$message}}</strong>
+                            </div>
+                            @endif
                             <div class="table-responsive m-b-40">
                                 <table id="dataTable" class="table table-striped table-bordered text-center"
                                     style="width:100%">
@@ -38,6 +44,8 @@
                                             <th>Deskripsi</th>
                                             <th>Tipe</th>
                                             <th>Harga</th>
+                                            <th>Stok</th>
+                                            <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -51,7 +59,10 @@
                                             </td>
                                             <td>{{ $p->description }}</td>
                                             <td>{{ $p->type }}</td>
-                                            <td>{{ $p->price }}</td>
+                                            <td>Rp.{{ $p->price }},00</td>
+                                            <td>{{ $p->stock }}</td>
+                                            <td><button class="btn btn-primary btn-block">{{ $p->status }}</button>
+                                            </td>
                                             <td>
                                                 <a href="{{ url('/admin/product/edit-product/'.$p->id) }}"
                                                     class="btn btn-primary" title="Ubah Data"><i

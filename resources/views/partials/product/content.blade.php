@@ -33,56 +33,12 @@
                     </div>
                     <div class="car__filter">
                         <h5>Filter</h5>
-                        <form action="#">
-                            <select>
-                                <option data-display="Brand">Select Brand</option>
-                                <option value="">Acura</option>
-                                <option value="">Audi</option>
-                                <option value="">Bentley</option>
-                                <<option value="">BMW</option>
-                                    <option value="">Bugatti</option>
-                            </select>
-                            <select>
-                                <option data-display="Model">Select Model</option>
-                                <option value="">Q3</option>
-                                <option value="">A4 </option>
-                                <option value="">AVENTADOR</option>
-                            </select>
-                            <select>
-                                <option value="">Body Style</option>
-                                <option value="">Option 1</option>
-                                <option value="">Option 2</option>
-                            </select>
-                            <select>
-                                <option value="">Condition</option>
-                                <option value="">First Hand</option>
-                                <option value="">Second Hand</option>
-                            </select>
-                            <select>
-                                <option value="">Transmisson</option>
-                                <option value="">Bluetooth</option>
-                                <option value="">WiFi</option>
-                            </select>
-                            <select>
-                                <option value="">Mileage</option>
-                                <option value="">27</option>
-                                <option value="">20</option>
-                                <option value="">15</option>
-                                <option value="">10</option>
-                            </select>
-                            <select>
-                                <option value="">Engine</option>
-                                <option value="">BS3</option>
-                                <option value="">BS4</option>
-                                <option value="">BS5</option>
-                                <option value="">BS6</option>
-                            </select>
-                            <select>
-                                <option value="">Colors</option>
-                                <option value="">Red</option>
-                                <option value="">Blue</option>
-                                <option value="">Black</option>
-                                <option value="">Yellow</option>
+                        <form action="{{ route('filter_product') }}" method="POST">
+                            @csrf
+                            <select name="filter_product">
+                                <option data-display="Pilih Tipe">Pilih Tipe</option>
+                                <option value="Masker">Masker</option>
+                                <option value="Gelang">Gelang</option>
                             </select>
                             <!-- <div class="filter-price">
 									<p>Price:</p>
@@ -96,7 +52,7 @@
 									</div>
 								</div> -->
                             <div class="car__filter__btn">
-                                <button type="submit" class="site-btn">Reset FIlter</button>
+                                <button type="submit" class="site-btn">FIlter</button>
                             </div>
                         </form>
                     </div>
