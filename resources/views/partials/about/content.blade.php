@@ -1,0 +1,70 @@
+<!-- About Us Section Begin -->
+<section class="about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title about-title">
+                    <h2>Selamat datang di Rull Rubber</h2>
+                    <p>First I will explain what contextual advertising is. Contextual advertising means the
+                        advertising of products on a website according to<br /> the content the page is displaying.
+                        For example if the content of a website was information on a Ford truck then the
+                        advertisements</p>
+                </div>
+            </div>
+        </div>
+        <div class="about__feature">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="about__feature__item">
+                        <img src="/assets/img/feature/feature-1.png" alt="">
+                        <h5>Quality Assurance System</h5>
+                        <p>It seems though that some of the biggest problems with the internet advertising trends
+                            are the lack of</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="about__feature__item">
+                        <img src="/assets/img/feature/feature-2.png" alt="">
+                        <h5>Accurate Testing Processes</h5>
+                        <p>Where do you register your complaints? How can you protest in any form against companies
+                            whose</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="about__feature__item">
+                        <img src="/assets/img/feature/feature-3.png" alt="">
+                        <h5>Infrastructure Integration Technology</h5>
+                        <p>So in final analysis: it’s true, I hate peeping Toms, but if I had to choose, I’d take
+                            one any day over an</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="about__pic">
+                    <img src="/assets/img/layanan-bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="about__item">
+                    <h5>Visi</h5>
+                    <p>Now, I’m not like Robin, that weirdo from my cultural anthropology class; I think that
+                        advertising is something that has its place in our society; which for better or worse is
+                        structured along a marketplace economy. But, simply because I feel advertising has a right
+                        to exist, doesn’t mean that I like or agree with it, in its</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="about__item">
+                    <h5>Misi</h5>
+                    <p>Where do you register your complaints? How can you protest in any form against companies
+                        whose advertising techniques you don’t agree with? You don’t. And on another point of
+                        difference between traditional products and their advertising and those of the internet
+                        nature, simply ignoring internet advertising is </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Us Section End -->
