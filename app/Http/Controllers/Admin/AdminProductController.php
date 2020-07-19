@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use DataTables;
-
+use Illuminate\Support\Str;
 class AdminProductController extends Controller
 {
     /**
@@ -51,7 +51,8 @@ class AdminProductController extends Controller
                 'type' => $request->type,
                 'price' => $request->price,
                 'stock' => $request->stock,
-                'status' => $request->status
+                'status' => $request->status,
+                'slug' => Str::slug($request->product_name)
             ]);
         }
         return redirect()->back()->with('message', 'Successfully Save Your Image file.');

@@ -46,8 +46,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $products)
+    public function show($slug)
     {
+        $products = Product::where('slug', $slug)->first();
         return view('product.details-product', compact('products'));
     }
 

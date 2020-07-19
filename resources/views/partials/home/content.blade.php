@@ -181,7 +181,7 @@
                     <img src="/assets/img/produk.jpg" alt="">
                     <h5>{{ $p->product_name }}</h5>
                     <p>{{ \Illuminate\Support\Str::limit($p->description, $limit = 50, $end = '') }} </p>
-                    <a href="{{ route('products',$p->id)  }}"><i class="fa fa-long-arrow-right"></i></a>
+                    <a href="{{ route('products',$p->slug)  }}"><i class="fa fa-long-arrow-right"></i></a>
                 </div>
             </div>
             @endforeach
